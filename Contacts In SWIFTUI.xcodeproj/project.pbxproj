@@ -13,6 +13,16 @@
 		9FD7E0DF2524124A000A0251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD7E0DE2524124A000A0251 /* Assets.xcassets */; };
 		9FD7E0E22524124A000A0251 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD7E0E12524124A000A0251 /* Preview Assets.xcassets */; };
 		9FD7E0E52524124A000A0251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD7E0E32524124A000A0251 /* LaunchScreen.storyboard */; };
+		9FD7E0F62524127F000A0251 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7E0F02524127F000A0251 /* UIImage.swift */; };
+		9FD7E0F72524127F000A0251 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7E0F12524127F000A0251 /* UIColor.swift */; };
+		9FD7E0F82524127F000A0251 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7E0F22524127F000A0251 /* UILabel.swift */; };
+		9FD7E0F92524127F000A0251 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7E0F32524127F000A0251 /* UIButton.swift */; };
+		9FD7E0FA2524127F000A0251 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7E0F42524127F000A0251 /* UIImageView.swift */; };
+		9FD7E0FB2524127F000A0251 /* ExtensionUivew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7E0F52524127F000A0251 /* ExtensionUivew.swift */; };
+		9FD7E0FF25241A6B000A0251 /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7E0FE25241A6B000A0251 /* ContactViewModel.swift */; };
+		9FD7E10325241A87000A0251 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7E10225241A87000A0251 /* Contact.swift */; };
+		9FD7E10625241AAC000A0251 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7E10525241AAC000A0251 /* ContactCell.swift */; };
+		9FD7E10A25241AF6000A0251 /* DiffableTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7E10925241AF6000A0251 /* DiffableTableViewVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		9FD7E0E12524124A000A0251 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FD7E0E42524124A000A0251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FD7E0E62524124A000A0251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FD7E0F02524127F000A0251 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		9FD7E0F12524127F000A0251 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		9FD7E0F22524127F000A0251 /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		9FD7E0F32524127F000A0251 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		9FD7E0F42524127F000A0251 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		9FD7E0F52524127F000A0251 /* ExtensionUivew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUivew.swift; sourceTree = "<group>"; };
+		9FD7E0FE25241A6B000A0251 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		9FD7E10225241A87000A0251 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		9FD7E10525241AAC000A0251 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		9FD7E10925241AF6000A0251 /* DiffableTableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableTableViewVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,11 @@
 		9FD7E0D725241249000A0251 /* Contacts In SWIFTUI */ = {
 			isa = PBXGroup;
 			children = (
+				9FD7E10825241AE9000A0251 /* controller */,
+				9FD7E0FD25241A60000A0251 /* view model */,
+				9FD7E0EF25241265000A0251 /* helpers */,
+				9FD7E0EE2524125D000A0251 /* view */,
+				9FD7E0ED25241257000A0251 /* model */,
 				9FD7E0D825241249000A0251 /* AppDelegate.swift */,
 				9FD7E0DA25241249000A0251 /* SceneDelegate.swift */,
 				9FD7E0DC25241249000A0251 /* ContentView.swift */,
@@ -73,6 +98,51 @@
 				9FD7E0E12524124A000A0251 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9FD7E0ED25241257000A0251 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				9FD7E10225241A87000A0251 /* Contact.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		9FD7E0EE2524125D000A0251 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9FD7E10525241AAC000A0251 /* ContactCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9FD7E0EF25241265000A0251 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9FD7E0F52524127F000A0251 /* ExtensionUivew.swift */,
+				9FD7E0F32524127F000A0251 /* UIButton.swift */,
+				9FD7E0F12524127F000A0251 /* UIColor.swift */,
+				9FD7E0F02524127F000A0251 /* UIImage.swift */,
+				9FD7E0F42524127F000A0251 /* UIImageView.swift */,
+				9FD7E0F22524127F000A0251 /* UILabel.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		9FD7E0FD25241A60000A0251 /* view model */ = {
+			isa = PBXGroup;
+			children = (
+				9FD7E0FE25241A6B000A0251 /* ContactViewModel.swift */,
+			);
+			path = "view model";
+			sourceTree = "<group>";
+		};
+		9FD7E10825241AE9000A0251 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9FD7E10925241AF6000A0251 /* DiffableTableViewVC.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +215,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD7E10625241AAC000A0251 /* ContactCell.swift in Sources */,
+				9FD7E0FA2524127F000A0251 /* UIImageView.swift in Sources */,
 				9FD7E0D925241249000A0251 /* AppDelegate.swift in Sources */,
+				9FD7E0FB2524127F000A0251 /* ExtensionUivew.swift in Sources */,
+				9FD7E0F62524127F000A0251 /* UIImage.swift in Sources */,
 				9FD7E0DB25241249000A0251 /* SceneDelegate.swift in Sources */,
 				9FD7E0DD25241249000A0251 /* ContentView.swift in Sources */,
+				9FD7E10325241A87000A0251 /* Contact.swift in Sources */,
+				9FD7E10A25241AF6000A0251 /* DiffableTableViewVC.swift in Sources */,
+				9FD7E0F92524127F000A0251 /* UIButton.swift in Sources */,
+				9FD7E0FF25241A6B000A0251 /* ContactViewModel.swift in Sources */,
+				9FD7E0F82524127F000A0251 /* UILabel.swift in Sources */,
+				9FD7E0F72524127F000A0251 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
