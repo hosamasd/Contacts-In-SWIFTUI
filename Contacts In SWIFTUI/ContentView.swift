@@ -31,17 +31,82 @@ struct ContactRowView:View {
     
 }
 
+struct ImagePicker: UIViewControllerRepresentable {
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var image: UIImage?
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
+        let picker = UIImagePickerController()
+        picker.delegate = context.coordinator
+        return picker
+    }
+
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
+
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+   
+    
+    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+        
+        let parent: ImagePicker
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+            if let uiImage = info[.originalImage] as? UIImage {
+                parent.image = uiImage
+            }
+
+            parent.presentationMode.wrappedValue.dismiss()
+
+        }
+
+        init(_ parent: ImagePicker) {
+            self.parent = parent
+        }
+    }
+
+}
+
 struct ContactFormView:View {
     
   @State  var name = ""
     @State  var sectionType = SectionType.ceo
+    @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
+    @State private var image : Image? = Image(systemName: "person.circle")
 
     var didAddContact:(String,SectionType)-> () = {_,_ in}
     var didCancelContact:()-> () = { }
 
     
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
+    }
+    
     var body:some View{
         VStack {
+            
+            HStack{
+                Spacer()
+                VStack{
+                    image?
+                        .resizable()
+                        .clipShape(Circle())
+                        .font(.system(size: 10))
+                        
+                        .onTapGesture(count: 1, perform: {
+                            self.showingImagePicker = true
+                            
+                        })
+                }.padding(.bottom,16)
+                Spacer()
+            }.padding()
+            
             TextField("name", text: $name)
             Picker( selection: $sectionType,label:Text("ABC")) {
                 Text("CEO").tag(SectionType.ceo)
@@ -69,16 +134,20 @@ struct ContactFormView:View {
                 .cornerRadius(5)
             })
         Spacer()
+            Spacer()
         }.padding()
+        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+            ImagePicker(image: self.$inputImage)
+        }
     }
     
 }
 
-//struct ContentView_Previewss: PreviewProvider {
-//    static var previews: some View {
-//        ContactFormView()
-//    }
-//}
+struct ContentView_Previewss: PreviewProvider {
+    static var previews: some View {
+        ContactFormView()
+    }
+}
 
 struct DiffableContainer:UIViewControllerRepresentable {
     
@@ -97,8 +166,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
